@@ -23,15 +23,14 @@ include('inc/header.php');
 
 <h1>Login</h1>
 
-<form action="dashboard.php" method="post">
+<form action="inc/authentication.php" method="post">
 	<label for="username">Username</label>
 	<input type="text" name="username">
 
 	<label for="password">Password</label>
-	<input type="text" name="password">
+	<input type="password" name="password">
 
 	<input type="submit" value="Login">
 </form>
-
 
 <?php include('inc/footer.php'); ?>

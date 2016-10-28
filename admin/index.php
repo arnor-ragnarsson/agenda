@@ -14,6 +14,3 @@ if($isLoggedin) {
 
 
 ?>
-
-
-<?php include ("inc/footer.php"); ?>

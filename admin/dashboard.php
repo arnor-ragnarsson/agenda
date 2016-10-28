@@ -1,10 +1,18 @@
 <?php
 	include('inc/config.php');
-	loginCheck();
 	include('inc/header.php');
+	include('calendar.php');
 ?>
 
 <h1>Dashboard</h1>
 
-<p>Í dag er</p>
-<?php echo date("d.m.Y"); ?>
+<?php createNavigation('mainNav'); ?>
+
+<?php createNavigation('userNav'); ?>
+
+<?php
+
+$calendar = new Calendar();
+
+echo $calendar->show();
+?>

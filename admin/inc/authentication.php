@@ -22,6 +22,6 @@ if($username != '' and $password != '') {
 	loginUserCheck($username, $password, $users);
 } else {
 	$_SESSION['isLoggedin'] = false;
-	header('Location: ../login.php?login=empty');
+	// header('Location: ../login.php?login=empty');
 }
 ?>
