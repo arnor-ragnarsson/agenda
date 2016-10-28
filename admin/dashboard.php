@@ -16,3 +16,5 @@ $calendar = new Calendar();
 
 echo $calendar->show();
 ?>
+
+<?php include('inc/footer.php'); ?>
