@@ -1,3 +1,16 @@
-<?php include ("inc/header.php"); ?>
-<?php echo "hallo" ?>
-<?php include ("inc/footer.php"); ?>
+<?php
+
+include('inc/config.php');
+
+if($isLoggedin) {
+
+	header('Location: dashboard.php');
+
+} else {
+
+	header('Location: login.php');
+
+}
+
+
+?>
