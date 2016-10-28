@@ -12,7 +12,7 @@ function loginCheck() {
   }
 
 // info about user, accessable via $userinfo['firstname'] and more, see authentication.php for other endings.
-  $userinfo = getUserInfo($getUserInfo);
+$userinfo = getUserInfo($getUserInfo);
 
 // log out user
   if($_GET['logout'] == 'true') {
@@ -73,4 +73,6 @@ function getUserInfo($getUserInfo) {
   $mysqli->close();
 
 }
+
+
  ?>
