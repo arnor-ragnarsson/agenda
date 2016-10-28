@@ -6,3 +6,19 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+.agenda__login__form label {
+  display: block;
+}
+
+.agenda__login__form input {
+  display: block;
+}
+
+.agenda__signup__form label {
+  display: block;
+}
+
+.agenda__signup__form input {
+  display: block;
+}
