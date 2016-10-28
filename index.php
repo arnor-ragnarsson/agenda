@@ -1,9 +1,7 @@
 <?php
   include('inc/config.php');
-  include('inc/header.php');
-?>
-<ul>
-<?php navigation($navItems); ?>
-</ul>
-
-<?php   include('inc/footer.php'); ?>
+  if($isLoggedIn) {
+    header('Location: profile.php');
+  } else {
+    header('Location: about.php');
+  }
