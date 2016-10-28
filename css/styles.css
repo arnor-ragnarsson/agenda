@@ -123,3 +123,19 @@ div#calendar ul.dates li.this_today {
 div.clear {
   clear: both;
 }
+
+.agenda__login__form label {
+  display: block;
+}
+
+.agenda__login__form input {
+  display: block;
+}
+
+.agenda__signup__form label {
+  display: block;
+}
+
+.agenda__signup__form input {
+  display: block;
+}
