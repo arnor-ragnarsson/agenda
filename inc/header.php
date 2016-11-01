@@ -10,7 +10,7 @@
     if($_SESSION['isLoggedin'] == true) {
       $userNavItems = array(
                       array('Logout', 'about.php?logout=true'),
-                      array($GLOBALS['userinfo']['firstname'], 'profile.php'),
+                      array($userinfo['firstname'], 'profile.php'),
                     );
        userNav($userNavItems);
      }?>
