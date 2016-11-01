@@ -1,6 +1,6 @@
 <?php
 // session_start();
-
+	include('./classes/classes.php');
 	include('functions.php');
 
 //Tékkar hvort notandi sé skráður inn

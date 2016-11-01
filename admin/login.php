@@ -23,7 +23,7 @@ include('inc/header.php');
 
 <h1>Login</h1>
 
-<form action="inc/authentication.php" method="post">
+<form action="inc/a_authentication.php" method="post">
 	<label for="username">Username</label>
 	<input type="text" name="username">
 
