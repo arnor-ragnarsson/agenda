@@ -26,18 +26,15 @@ class User {
     $stmt->execute();
     //$stmt ->bind_param('issssi', $user_id, $username, $firstname, $lastname, $email, $status );
     $stmt->bind_result($user_id, $username, $firstname, $lastname, $email);
-
-    while($stmt->fetch()) {
-      $user = array();
-      $user['userId'] = $user_id;
-      $user['username'] = $username;
-      $user['firstname'] = $firstname;
-      $user['lastname'] = $lastname;
-      $user['email'] = $email;
-
-          echo "<tr><td>" . $user['userId']. "</td><td>" . $user['firstname']. " " . $user['lastname']. "</td><td>". $user['email']."</td><td>". $user['username'].'</tr>';
+    if ($stmt->num_rows > 0) {
+      while($row = $stmt->fetch_assoc()) {
+        echo "<tr><td>" . $row["user_id"]. "</td><td>" . $row["firstname"]. " " . $row["lastname"]. "</td><td>". $row["email"]."</td><td>". $row["username"];
+        
+        echo '</tr>';
+      }
+    } else {
+      echo "0 results";
     }
-
     $stmt->close();
   }
 

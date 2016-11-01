@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include('./classes/classes.php');
+include('./admin/classes/classes.php');
 include('functions.php');
 include('authentication.php');
 
@@ -42,9 +42,7 @@ function loginCheck() {
     return $getInfo;
   }
 
-
-    $userinfo = getUserInfo();
-
+  $userinfo = getUserInfo();
 
 
 // signup login buttons
