@@ -11,5 +11,10 @@
   * Shortcut to username and password
 */
 
+function getUsers() {
+	$allUsers = new User();
+	$allUsers->getAllUsers();
+}
+
 
 ?>

@@ -12,6 +12,7 @@ function loginCheck() {
     }
   }
 
+
 // log out user
   if(isset($_GET['logout']) && $_GET['logout'] == 'true') {
     $_SESSION['isLoggedin'] = false;
@@ -43,6 +44,7 @@ function loginCheck() {
 
   $userinfo = getUserInfo();
 
+
 // signup login buttons
 $navItems = array(array('Signup', 'signup.php'),
                   array('Login', 'login.php')
@@ -65,4 +67,6 @@ function userNav($userNavItems) {
   }
   echo '</ul></div>';
 }
+
+
  ?>

@@ -2,7 +2,7 @@
 
 include('inc/config.php');
 
-if($isLoggedin) {
+if($_SESSION['isLoggedin'] == true) {
 
 	header('Location: dashboard.php');
 

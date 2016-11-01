@@ -1,17 +1,19 @@
 <?php
-// session_start();
-	include('./classes/classes.php');
+ session_start();
+
+  include('./classes/classes.php');
 	include('functions.php');
 
 //Tékkar hvort notandi sé skráður inn
-// function loginCheck() {
-// 	if($_SESSION['isLoggedin'] == false) {
-// 		header('Location: ../admin/login.php');
-// 	}
-// }
+function loginCheck() {
+	if($_SESSION['isLoggedin'] == false) {
+		header('Location: ../admin/login.php');
+	}
+}
 
-// if($_GET['logout'] == 'true') {
-// 	$_SESSION['isLoggedin'] = false;
+ if(isset($_GET['logout']) && $_GET['logout'] == 'true') {
+ 	$_SESSION['isLoggedin'] = false;
+}
 
 	//Remove all session variables
 	// session_unset();
