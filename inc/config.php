@@ -3,7 +3,6 @@ session_start();
 
 include('./classes/classes.php');
 include('functions.php');
-include('authentication.php');
 
 // prevent user access when logged out
 function loginCheck() {
@@ -43,8 +42,8 @@ function loginCheck() {
   }
 
 
-    $userinfo = getUserInfo();
 
+    $userinfo = getUserInfo();
 
 
 // signup login buttons
@@ -69,6 +68,5 @@ function userNav($userNavItems) {
   }
   echo '</ul></div>';
 }
-
 
  ?>

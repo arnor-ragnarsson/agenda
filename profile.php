@@ -8,4 +8,6 @@
 <?php echo '<h2>Welcome '.$userinfo['firstname'].' '.$userinfo['lastname'].'</h2>';?>
 
 
+
+
 <?php   include('inc/footer.php'); ?>
