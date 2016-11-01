@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include('./admin/classes/classes.php');
+include('./classes/classes.php');
 include('functions.php');
 
 // prevent user access when logged out
