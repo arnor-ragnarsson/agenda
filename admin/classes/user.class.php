@@ -17,5 +17,26 @@ class User {
     loginUserCheck($username, $password);
     header('Location: ./thankyou.php');
   }
+
+  public function getAllUsers() {
+    $db = $GLOBALS['gdb'];
+    $mysqli = $db->getConnection();
+    //prepare and bind
+    $stmt = $mysqli->prepare("SELECT user_id, username, first_name, last_name, email FROM users");
+    $stmt->execute();
+    //$stmt ->bind_param('issssi', $user_id, $username, $firstname, $lastname, $email, $status );
+    $stmt->bind_result($user_id, $username, $firstname, $lastname, $email);
+    if ($stmt->num_rows > 0) {
+      while($row = $stmt->fetch_assoc()) {
+        echo "<tr><td>" . $row["user_id"]. "</td><td>" . $row["firstname"]. " " . $row["lastname"]. "</td><td>". $row["email"]."</td><td>". $row["username"];
+        
+        echo '</tr>';
+      }
+    } else {
+      echo "0 results";
+    }
+    $stmt->close();
+  }
+
 }
  ?>
