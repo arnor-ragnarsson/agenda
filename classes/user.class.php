@@ -1,5 +1,4 @@
 <?php
-include('./inc/authentication.php');
 class User {
 
   public function __construct() {
