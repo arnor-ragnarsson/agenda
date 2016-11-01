@@ -1,8 +1,9 @@
 <?php
 session_start();
 
-include('./classes/classes.php');
+include('./admin/classes/classes.php');
 include('functions.php');
+include('authentication.php');
 
 // prevent user access when logged out
 function loginCheck() {
@@ -40,7 +41,7 @@ function loginCheck() {
     return $getInfo;
   }
 
-  $GLOBALS['userinfo'] = getUserInfo();
+  $userinfo = getUserInfo();
 
 // signup login buttons
 $navItems = array(array('Signup', 'signup.php'),
