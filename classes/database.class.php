@@ -1,6 +1,4 @@
 <?php
-
-// mysql database class
 class Database {
   private $_connection;
   private static $_instance;

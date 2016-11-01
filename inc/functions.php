@@ -1,6 +1,4 @@
 <?php
-include('./classes/classes.php');
-
 // function to register new users into database
 if(isset($_POST['create_username']) && !empty($_POST['create_username']) && isset($_POST['create_password']) && !empty($_POST['create_password'])) {
   $username = $_POST['create_username'];
