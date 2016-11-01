@@ -1,7 +1,4 @@
 <?php
-
-
-
 function loginUserCheck($user_username, $user_password) {
   $db = $GLOBALS['gdb'];
   $mysqli = $db->getConnection();
@@ -13,7 +10,6 @@ function loginUserCheck($user_username, $user_password) {
   while ($stmt->fetch()) {
     if($user_username == $_username && $user_password == $_password) {
       $_SESSION['isLoggedin'] = true;
-
       $_SESSION['userInfo'] = $_userId;
       header('Location: profile.php');
       break;
@@ -23,7 +19,6 @@ function loginUserCheck($user_username, $user_password) {
     }
   }
   $stmt->close();
-  $mysqli->close();
 }
 
 if(isset($_POST['user_username']) && !empty($_POST['user_username']) && isset($_POST['user_password']) && !empty($_POST['user_password'])) {
@@ -32,6 +27,4 @@ if(isset($_POST['user_username']) && !empty($_POST['user_username']) && isset($_
 
   loginUserCheck($user_username, $user_password);
 }
-
-
  ?>
